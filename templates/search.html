@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Recipe</title>
+    <link rel="stylesheet" href="/static/css/App.css">
+</head>
+
+<body>
+    <h1>Search by Category</h1>
+    <p>Find recipes using commonly searched categories or enter your own.</p>
+
+    <div class="searchform">
+        <form>
+            <select>
+                <option>- Select -</option>
+                <option value="salad">Salad</option>
+                <option value="soup">Soup</option>
+                <option value="pasta">Pasta</option>
+                <option value="burger">Burger</option>
+                <option value="cookies">Cookies</option>
+                <option value="cake">Cake</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <p>Not finding what you're looking for? Use the form below.</p>
+
+    <div class="searchform">
+        <form>
+            <input type="text" id="search-input"></input>
+            <span title="hi">?</span>
+            <button onclick="document.getElementById('search-input').value = ''">Clear</button>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>
