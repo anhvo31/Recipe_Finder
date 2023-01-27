@@ -28,10 +28,16 @@
 
     <div class="searchform">
         <form>
-            <input type="text" id="search-input"></input>
-            <span title="hi">?</span>
+            <input class="search-input" type="text" id="search-input"></input>
+
+            <span title="This section can be used to search for a specific type of recipe.
+            Input can only contain characters and spaces.">?</span>
+
+            <p>
             <button onclick="document.getElementById('search-input').value = ''">Clear</button>
+
             <button type="submit">Search</button>
+            </p>
         </form>
     </div>
 </body>
