@@ -10,8 +10,8 @@
     <p>Find recipes using commonly searched categories or enter your own.</p>
 
     <div class="searchform">
-        <form>
-            <select>
+        <form id="search-recipe-form" action="/search-result" method="post">
+            <select name ="input-category" id="input-category">
                 <option>- Select -</option>
                 <option value="salad">Salad</option>
                 <option value="soup">Soup</option>
@@ -27,18 +27,23 @@
     <p>Not finding what you're looking for? Use the form below.</p>
 
     <div class="searchform">
-        <form>
-            <input class="search-input" type="text" id="search-input"></input>
+        <form id="search-recipe-form" action="/search-result" method="post">
+            <input class="search-input" type="text" name ="input-category" id="input-category"></input>
 
             <span title="This section can be used to search for a specific type of recipe.
             Input can only contain characters and spaces.">?</span>
 
             <p>
-            <button onclick="document.getElementById('search-input').value = ''">Clear</button>
+            <button type="reset" value="reset">Clear</button>
 
             <button type="submit">Search</button>
             </p>
         </form>
     </div>
+    <p>&nbsp;</p>
+
+    <form action="/">
+        <button class="nav" type="submit">Return to Main Menu</button>
+    </form>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="/static/css/App.css">
+</head>
+
+<body>
+    <h1>About Us</h1>
+
+    <div class="description">
+        <p>This app was made as a project for CS 361 at OSU.</p>
+        <p>
+            This website can be used to find new or existing recipes to help you plan out your meals. 
+            The results will include a picture and a link to the full recipe, where you can find the ingredients 
+            and instructions to make an amazing dish!
+        </p>
+        <p>In the main menu, you can find the following functionalities:</p>
+        <p>
+            <ol>
+                <li>Search by Category
+                    <ul>
+                        <li>Allows you to search by food categories, such as soups, salads, pastas, etc.</li>
+                        <li>If the category you are looking for does not exist, manually enter your own category.</li>
+                    </ul>
+                </li>
+                <li>Generate Random Recipe
+                    <ul>
+                        <li>
+                            Randomly generate a recipe for you. Return to main menu and continue to generate 
+                            random recipes until you find one of your liking!
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </p>
+        <p>
+            The recipe search was implemented using a microservice architecture to call and received response from the Edamam API.
+        </p>
+    </div>
+
+    <p>&nbsp;</p>
+
+    <form action="/">
+        <button class="nav" type="submit">Return to Main Menu</button>
+    </form>
+</body>
+</html>
