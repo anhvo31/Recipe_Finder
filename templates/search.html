@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Recipe</title>
+    <link rel="stylesheet" href="/static/css/App.css">
+</head>
+
+<body>
+    <h1>Search by Category</h1>
+    <p>Find recipes using commonly searched categories or enter your own.</p>
+
+    <div class="searchform">
+        <form id="search-recipe-form" action="/search-result" method="post">
+            <select name ="input-category" id="input-category">
+                <option>- Select -</option>
+                <option value="salad">Salad</option>
+                <option value="soup">Soup</option>
+                <option value="pasta">Pasta</option>
+                <option value="burger">Burger</option>
+                <option value="cookies">Cookies</option>
+                <option value="cake">Cake</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <p>Not finding what you're looking for? Use the form below.</p>
+
+    <div class="searchform">
+        <form id="search-recipe-form" action="/search-result" method="post">
+            <input class="search-input" type="text" name ="input-category" id="input-category"></input>
+
+            <span title="This section can be used to search for a specific type of recipe.
+            Input can only contain characters and spaces.">?</span>
+
+            <p>
+            <button type="reset" value="reset">Clear</button>
+
+            <button type="submit">Search</button>
+            </p>
+        </form>
+    </div>
+    <p>&nbsp;</p>
+
+    <form action="/">
+        <button class="nav" type="submit">Return to Main Menu</button>
+    </form>
+</body>
+</html>
