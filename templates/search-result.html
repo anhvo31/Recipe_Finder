@@ -6,8 +6,34 @@
 </head>
 
 <body>
-    <h1>Result is for</h1>
-    <p>{{ category }}</p>
+    <h1>Result</h1>
+
+    <p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for recipe in recipes %}
+                <tr>
+                    <td>
+                        <img src="{{recipe['image']}}" alt="food image">
+                    </td>
+                    <td>
+                        {{recipe["name"]}}
+                    </td>
+                    <td>
+                        <a href="{{recipe['link']}}">{{recipe['link']}}</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </p>
 
 
     <p>&nbsp;</p>
