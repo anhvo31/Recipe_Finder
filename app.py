@@ -50,7 +50,7 @@ def search_result():
     if request.method == "POST":
         category = request.form.get("input-category")
 
-    # Starts client socket with user input
+    # Sets up client socket with user input
     result = recipe_client(category)
     
     return render_template("search-result.html", recipes=result)

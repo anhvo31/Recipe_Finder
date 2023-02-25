@@ -10,13 +10,6 @@
 
     <p>
         <table>
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
             <tbody>
                 {% for recipe in recipes %}
                 <tr>
@@ -24,10 +17,13 @@
                         <img src="{{recipe['image']}}" alt="food image">
                     </td>
                     <td>
-                        {{recipe["name"]}}
-                    </td>
-                    <td>
-                        <a href="{{recipe['link']}}">{{recipe['link']}}</a>
+                        <div>{{recipe["name"]}}</div>
+                        <br><br>
+                        <div>
+                            Full Recipe:
+                            <br>
+                            <a href="{{recipe['link']}}">{{recipe['link']}}</a>
+                        </div>
                     </td>
                 </tr>
                 {% endfor %}
