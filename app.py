@@ -19,7 +19,9 @@ def recipe_client(query):
     HOST = "127.0.0.1"
     PORT = 5001
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    print("Connecting to server...")
     client_socket.connect((HOST, PORT))
+    print(f"Sending query: {query}")
     client_socket.send(query.encode())
 
     # Receives all packets sent by server
@@ -32,6 +34,7 @@ def recipe_client(query):
     
     # Converts string to list object
     data_list = json.loads(data)
+    print("JSON received")
 
     client_socket.close()
     return data_list
