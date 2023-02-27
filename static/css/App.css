@@ -35,3 +35,8 @@ span {
     padding-left: 500px;
     padding-right: 500px;
 }
+
+.recipename {
+    font-weight: bold;
+    font-size: 2vw;
+}
