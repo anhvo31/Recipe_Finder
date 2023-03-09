@@ -11,19 +11,19 @@
     <div class="navigation">
         <p>
         <form action="/search">
-            <button class="nav" type="submit" title="Look for recipes using keywords like soup, pasta, etc.">Search by Category</button>
+            <button class="nav" type="submit">Search by Category</button>
         </form>
         </p>
 
         <p>
-        <form action="/random">
-            <button class="nav" type="submit" title="Receives a random recipe of any category.">Generate Random Recipe</button>
+        <form id="random-recipe-form" action="/random" method="post">
+            <button class="nav" type="submit" name="random-recipe" value="random">Generate Random Recipe</button>
         </form> 
         </p>
 
         <p>
             <form action="/about">
-                <button class="nav" type="submit" title="Find out more about the app and functions.">Learn More</button>
+                <button class="nav" type="submit">Learn More</button>
             </form> 
         </p>
     </div>

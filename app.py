@@ -39,7 +39,7 @@ def recipe_client(query):
     client_socket.close()
     return data_list
 
-# Provides a route where requests on the web app can be addressed
+# Routes
 @app.route('/')
 def home():
     return render_template("home.html")
@@ -58,9 +58,14 @@ def search_result():
     
     return render_template("search-result.html", recipes=result)
 
-@app.route('/random')
+@app.route('/random', methods=["POST", "GET"])
 def random_recipe():
-    return render_template("random.html")
+    if request.method == "POST":
+        query = request.form.get("random-recipe")
+
+    random_result = recipe_client(query)
+
+    return render_template("random.html", recipes=random_result)
 
 @app.route('/about')
 def about():
