@@ -1,4 +1,3 @@
-from flask import Flask
 from flask import Flask, render_template
 from flask import request
 import os
@@ -15,7 +14,6 @@ app = Flask(__name__)
 
 # Edamam API client
 def recipe_client(query):
-    # Sets up socket to send request
     HOST = "127.0.0.1"
     PORT = 5001
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -53,7 +51,6 @@ def search_result():
     if request.method == "POST":
         category = request.form.get("input-category")
 
-    # Sets up client socket with user input
     result = recipe_client(category)
     
     return render_template("search-result.html", recipes=result)
@@ -66,6 +63,16 @@ def random_recipe():
     random_result = recipe_client(query)
 
     return render_template("random.html", recipes=random_result)
+
+@app.route('/save', methods=["POST", "GET"])
+def save_recipe():
+    if request.method == "POST":
+        recipe_link = request.form.get("recipe-link")
+    
+    with open('recipes.txt', 'a') as file:
+        file.write(f'{recipe_link}\n')
+
+    return ('', 204)
 
 @app.route('/about')
 def about():
