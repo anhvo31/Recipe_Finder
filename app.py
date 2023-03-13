@@ -53,7 +53,7 @@ def search_result():
 
     result = recipe_client(category)
     
-    return render_template("search-result.html", recipes=result)
+    return render_template("search-result.html", category=category, recipes=result)
 
 @app.route('/random', methods=["POST", "GET"])
 def random_recipe():
