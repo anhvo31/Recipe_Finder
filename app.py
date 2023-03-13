@@ -74,6 +74,16 @@ def save_recipe():
 
     return ('', 204)
 
+@app.route('/saved-recipes')
+def saved_recipes():
+    recipe_list = []
+
+    with open('recipes.txt', 'r') as file:
+        for items in file:
+            recipe_list.append(items)
+
+    return render_template("saved_recipes.html", recipes=recipe_list)
+
 @app.route('/about')
 def about():
     return render_template("about.html")
