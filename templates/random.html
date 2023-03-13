@@ -8,6 +8,34 @@
 <body>
     <h1>Surprise!</h1>
 
+    <p>
+        <table>
+            <tbody>
+                {% for recipe in recipes %}
+                <tr>
+                    <td>
+                        <img src="{{recipe['image']}}" alt="food image">
+                    </td>
+                    <td>
+                        <div class="recipename">{{recipe["name"]}}</div>
+                        <br><br>
+                        <div>
+                            Full Recipe:
+                            <br>
+                            <a href="{{recipe['link']}}">{{recipe['link']}}</a>
+                        </div>
+                        <br><br>
+                        <div>
+                            <form id="save-recipe-form" action="/save" method="post">
+                                <button class="save" type="submit" name="recipe-link" value="{{recipe['link']}}">Save</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </p>
     <p>&nbsp;</p>
 
     <form action="/">

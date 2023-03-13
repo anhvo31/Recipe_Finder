@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="/static/css/App.css">
+</head>
+
+<body>
+    <h1>Saved Recipes</h1>
+
+    <p>
+        <ul>
+            {% for recipe in recipes %}
+            <li>
+                <a href="{{ recipe }}">{{ recipe }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </p>
+
+    <p>&nbsp;</p>
+
+    <form action="/">
+        <button class="nav" type="submit">Return to Main Menu</button>
+    </form>
+</body>
+</html>

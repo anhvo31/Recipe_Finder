@@ -6,6 +6,20 @@ body {
     min-height: 100vh;
 }
 
+table {
+    table-layout: auto;
+    width: 50%;
+}
+
+tr {
+    outline: thin solid black;
+}
+
+td {
+    word-wrap: break-word;
+    padding: 20px;
+}
+
 .nav {
     margin: 0 auto;
     display: block;
@@ -38,5 +52,5 @@ span {
 
 .recipename {
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 3vmin;
 }
