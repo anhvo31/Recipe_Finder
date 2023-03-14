@@ -48,6 +48,7 @@ def search_recipe():
 
 @app.route('/search-result', methods=["POST", "GET"])
 def search_result():
+    # Get user input for search query
     if request.method == "POST":
         category = request.form.get("input-category")
 
@@ -57,6 +58,7 @@ def search_result():
 
 @app.route('/random', methods=["POST", "GET"])
 def random_recipe():
+    # Get query to call random recipe
     if request.method == "POST":
         query = request.form.get("random-recipe")
 
@@ -69,6 +71,7 @@ def save_recipe():
     if request.method == "POST":
         recipe_link = request.form.get("recipe-link")
     
+    # Writes recipe link to text file
     with open('recipes.txt', 'a') as file:
         file.write(f'{recipe_link}\n')
 
@@ -78,6 +81,7 @@ def save_recipe():
 def saved_recipes():
     recipe_list = []
 
+    # Converts links in text file to list object
     with open('recipes.txt', 'r') as file:
         for items in file:
             recipe_list.append(items)
