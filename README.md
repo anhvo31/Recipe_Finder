@@ -1,5 +1,5 @@
 # Recipe Search App
-![] (https://github.com/anhvo31/Recipe_Finder/blob/main/recipe_finder_demo.gif)
+![](https://github.com/anhvo31/Recipe_Finder/blob/main/recipe_finder_demo.gif)
 
 This project is a recipe search web application that utilizes API calls to retrieve recipes from the Edamam recipe database. 
 
